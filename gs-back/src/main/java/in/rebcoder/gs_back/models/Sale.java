@@ -10,11 +10,16 @@ public class Sale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private LocalDate saleDate;
-    private double totalAmount;  // Total amount for all items sold
-    @ManyToMany
-    private List<Item> items;    // List of items sold in this sale
+
+    @OneToMany
+    private List<Item> items;
+
     @ManyToOne
-    private User seller;           // seller created the sale
+    private User seller;
+
+    private String saleName;
+    private LocalDate saleDate;
+    private String description;
+    private String status;
 }
 

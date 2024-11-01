@@ -1,22 +1,38 @@
 package in.rebcoder.gs_back.models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 
 @Entity
+@Getter
+@Setter
 public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private LocalDateTime appointmentDate;
+
     @ManyToOne
-    private User buyer;  // Buyer making the appointment
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user; // The user who wants to visit the garage sale
+
     @ManyToOne
-    private Home home;   // Home where the sale takes place
+    @JoinColumn(name = "home_id", nullable = false)
+    private Home home; // The home where the garage sale is
+
+    private LocalDateTime appointmentTime; // Scheduled time for the visit
+
+    private String status; // Status of the appointment (e.g., PENDING, CONFIRMED, CANCELED)
     @ManyToMany
-    private List<Item> interestedItems;  // Items the buyer is interested in
+    @JoinTable(
+            name = "appointment_items",
+            joinColumns = @JoinColumn(name = "appointment_id"),
+            inverseJoinColumns = @JoinColumn(name = "item_id")
+    )
+    private List<Item> interestedItems; // Items user is interested in buying
 }
 

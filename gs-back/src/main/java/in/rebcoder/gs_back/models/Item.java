@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -18,5 +20,7 @@ public class Item {
     @ManyToOne
     @JoinColumn(name = "home_id", nullable = false)
     private Home home; // The home where this item is listed for sale
+    @ManyToMany(mappedBy = "interestedItems")
+    private List<Appointment> appointments; // Appointments interested in this item
 }
 

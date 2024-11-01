@@ -2,6 +2,7 @@ package in.rebcoder.gs_back.controllers;
 
 import in.rebcoder.gs_back.models.Home;
 import in.rebcoder.gs_back.models.Item;
+import in.rebcoder.gs_back.models.User;
 import in.rebcoder.gs_back.services.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -35,5 +36,17 @@ public class ItemController {
     @DeleteMapping("/{id}")
     public void deleteItem(@PathVariable Long id) {
         itemService.deleteItem(id);
+    }
+
+    @GetMapping("/seller/{sellerId}")
+    public List<Item> getItemsBySeller(@PathVariable Long sellerId) {
+        User seller = new User();
+        seller.setId(sellerId); // Retrieve user if necessary
+        return itemService.getItemsBySeller(seller);
+    }
+
+    @GetMapping
+    public List<Item> getAllItems() {
+        return itemService.getAllItems();
     }
 }

@@ -16,4 +16,10 @@ public interface ItemService {
     Item updateItem(Long id, Item updatedItem);
 
     void deleteItem(Long id);
+
+    List<Item> getItemsBySeller(User seller);
+
+    List<Item> getAllItems();
+
+    void addItem(Item item, User user);
 }
