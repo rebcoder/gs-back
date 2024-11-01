@@ -11,6 +11,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@Table(name = "appointment")
 public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +27,9 @@ public class Appointment {
 
     private LocalDateTime appointmentTime; // Scheduled time for the visit
 
-    private String status; // Status of the appointment (e.g., PENDING, CONFIRMED, CANCELED)
+    @Enumerated(EnumType.STRING)
+    private AppointmentStatus status; // Status of the appointment (e.g., PENDING, CONFIRMED, COMPLETED)
+
     @ManyToMany
     @JoinTable(
             name = "appointment_items",

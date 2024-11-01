@@ -36,16 +36,9 @@ public class ItemServiceImpl implements ItemService{
             itemRepository.deleteById(id);
         }
 
-    public List<Item> getItemsBySeller(User seller) {
-        return itemRepository.findBySeller(seller);
-    }
 
     public List<Item> getAllItems() {
         return itemRepository.findAll();
     }
 
-    @Override
-    public void addItem(Item item, User user) {
-
-    }
 }

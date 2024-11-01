@@ -7,6 +7,7 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
   logging:
     level:
       org.hibernate.SQL: DEBUG
@@ -20,7 +21,7 @@ spring:
             client-id: YOUR_GOOGLE_CLIENT_ID
             client-secret: YOUR_GOOGLE_CLIENT_SECRET
             scope: profile, email
-            redirect-uri: "{baseUrl}/login/oauth2/code/google"
+            redirect-uri: "http://localhost:8080/login/oauth2/code/google"
 
 server:
   port: 8080

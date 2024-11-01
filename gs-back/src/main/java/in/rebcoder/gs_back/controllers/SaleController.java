@@ -4,6 +4,7 @@ import in.rebcoder.gs_back.models.Sale;
 import in.rebcoder.gs_back.models.User;
 import in.rebcoder.gs_back.services.SaleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,6 +17,7 @@ public class SaleController {
     private SaleService saleService;
 
     @PostMapping
+    @PreAuthorize("hasRole('SELLER')")
     public Sale createSale(@RequestBody Sale sale) {
         return saleService.createSale(sale);
     }

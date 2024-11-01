@@ -19,8 +19,8 @@ public class SellerController {
     private ItemService itemService;
     @PreAuthorize("hasRole('SELLER')")
     @PostMapping("/add-item")
-    public ResponseEntity<String> addItem(@RequestBody Item item, @AuthenticationPrincipal User user) {
-        itemService.addItem(item, user);
+    public ResponseEntity<String> addItem(@RequestBody Item item) {
+        itemService.createItem(item);
         return ResponseEntity.ok("Item added successfully");
     }
 }

@@ -16,7 +16,7 @@ public class ItemController {
     @Autowired
     private ItemService itemService;
 
-    @PostMapping
+    @PostMapping("/create")
     public Item createItem(@RequestBody Item item) {
         return itemService.createItem(item);
     }
@@ -38,14 +38,7 @@ public class ItemController {
         itemService.deleteItem(id);
     }
 
-    @GetMapping("/seller/{sellerId}")
-    public List<Item> getItemsBySeller(@PathVariable Long sellerId) {
-        User seller = new User();
-        seller.setId(sellerId); // Retrieve user if necessary
-        return itemService.getItemsBySeller(seller);
-    }
-
-    @GetMapping
+    @GetMapping("/all")
     public List<Item> getAllItems() {
         return itemService.getAllItems();
     }

@@ -11,5 +11,4 @@ import java.util.List;
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Long> {
     List<Item> findByHome(Home home); // Find items by home
-    List<Item> findBySeller(User seller); // Retrieve items listed by a specific user
 }

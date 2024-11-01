@@ -14,7 +14,7 @@ public class ProfileController {
     @Autowired
     private ProfileService profileService;
 
-    @PostMapping
+    @PostMapping("/create")
     public Profile createProfile(@RequestBody Profile profile) {
         return profileService.createProfile(profile);
     }

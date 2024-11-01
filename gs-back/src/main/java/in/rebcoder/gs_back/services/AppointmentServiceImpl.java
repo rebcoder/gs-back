@@ -1,6 +1,7 @@
 package in.rebcoder.gs_back.services;
 
 import in.rebcoder.gs_back.models.Appointment;
+import in.rebcoder.gs_back.models.AppointmentStatus;
 import in.rebcoder.gs_back.models.Home;
 import in.rebcoder.gs_back.models.User;
 import in.rebcoder.gs_back.repositories.AppointmentRepository;
@@ -15,7 +16,7 @@ public class AppointmentServiceImpl implements AppointmentService{
     private AppointmentRepository appointmentRepository;
 
     public Appointment createAppointment(Appointment appointment) {
-        appointment.setStatus("PENDING");
+        appointment.setStatus(AppointmentStatus.PENDING);
         return appointmentRepository.save(appointment);
     }
 
