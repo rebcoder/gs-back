@@ -1,6 +1,7 @@
 package in.rebcoder.gs_back.services;
 
 import in.rebcoder.gs_back.models.Appointment;
+import in.rebcoder.gs_back.models.AppointmentStatus;
 import in.rebcoder.gs_back.models.Home;
 import in.rebcoder.gs_back.models.User;
 
@@ -16,4 +17,8 @@ public interface AppointmentService {
     Appointment updateAppointment(Long id, Appointment updatedAppointment);
 
     void deleteAppointment(Long id);
+
+    Appointment scheduleAppointment(Appointment appointment);
+
+    void updateAppointmentStatus(long l, AppointmentStatus confirmed);
 }

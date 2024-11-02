@@ -37,5 +37,6 @@ public class Appointment {
             inverseJoinColumns = @JoinColumn(name = "item_id")
     )
     private List<Item> interestedItems; // Items user is interested in buying
+
 }
 
