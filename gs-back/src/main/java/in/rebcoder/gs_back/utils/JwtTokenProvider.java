@@ -1,4 +1,4 @@
-package in.rebcoder.gs_back.config;
+package in.rebcoder.gs_back.utils;
 
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;
