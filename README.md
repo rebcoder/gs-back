@@ -68,6 +68,7 @@ Run with Docker:
 ### Project Structure
 Here’s an overview of the project structure:
 
+          ```plaintext
           src
           ├── main
           │   ├── java/in/rebcoder/gs_back
@@ -82,7 +83,7 @@ Here’s an overview of the project structure:
           └── test                        # Test files (unit and integration)
 
 ### ER Diagram
-    ![image](https://github.com/user-attachments/assets/879e1746-a397-47f2-a858-7139761e0e57)
+![image](https://github.com/user-attachments/assets/879e1746-a397-47f2-a858-7139761e0e57)
 
 ### API Endpoints
 
