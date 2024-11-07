@@ -68,19 +68,21 @@ Run with Docker:
 ### Project Structure
 Here’s an overview of the project structure:
 
-src
-├── main
-│   ├── java/in/rebcoder/gs_back
-│   │   ├── controllers         # REST controllers
-│   │   ├── models              # Entity classes
-│   │   ├── repositories        # JPA repositories
-│   │   ├── services            # Service layer with business logic
-│   │   └── config              # Security and application configurations
-│   └── resources
-│       ├── application.yml     # Application configuration
-│       └── db                  # Database-related files
-└── test                        # Test files (unit and integration)
+          src
+          ├── main
+          │   ├── java/in/rebcoder/gs_back
+          │   │   ├── controllers         # REST controllers
+          │   │   ├── models              # Entity classes
+          │   │   ├── repositories        # JPA repositories
+          │   │   ├── services            # Service layer with business logic
+          │   │   └── config              # Security and application configurations
+          │   └── resources
+          │       ├── application.yml     # Application configuration
+          │       └── db                  # Database-related files
+          └── test                        # Test files (unit and integration)
 
+### ER Diagram
+    ![image](https://github.com/user-attachments/assets/879e1746-a397-47f2-a858-7139761e0e57)
 
 ### API Endpoints
 
