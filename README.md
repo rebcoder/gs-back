@@ -48,7 +48,6 @@ This project serves as the backend for the Garage Sale App, built using Spring B
 
 Create a `.env` file in the root directory to define the following environment variables:
 
-```plaintext
 SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/gs_db
 SPRING_DATASOURCE_USERNAME=your_db_username
 SPRING_DATASOURCE_PASSWORD=your_db_password
@@ -58,25 +57,17 @@ JWT_SECRET=your_jwt_secret_key
 
 ### Running the Application
 Install Dependencies:
-
-```bash
-mvn clean install
+-mvn clean install
 
 Run with Maven:
-
-```bash
-Copy code
-mvn spring-boot:run
-
+-mvn spring-boot:run
 
 Run with Docker:
-```bash
-docker-compose up -d
+-docker-compose up -d
 
 ### Project Structure
 Here’s an overview of the project structure:
 
-```plaintext
 src
 ├── main
 │   ├── java/in/rebcoder/gs_back
@@ -110,8 +101,6 @@ PUT /appointments/{id}/status - Update appointment status.
 
 API Documentation
 Swagger documentation is available at:
-
-```bash
 http://localhost:8080/swagger-ui/index.html
 
 Testing
@@ -119,8 +108,7 @@ Unit Testing
 Unit tests validate service layer functionality, ensuring that business logic works as expected. Tests use mock objects for database interactions to prevent reliance on actual data.
 
 Run all unit tests:
-```bash
-mvn test
+-mvn test
 
 Integration Testing
 Integration tests validate API endpoints and the overall flow, covering scenarios like item creation, appointment scheduling, and user authentication. Tests are located in src/test/java.
@@ -129,12 +117,9 @@ Docker Support
 To run the backend with Docker, ensure Docker and Docker Compose are installed. The following commands are available:
 
 Start the containers
-```bash
-docker-compose up -d
+-docker-compose up -d
 Stop and remove containers and volumes
-
-```bash
-docker-compose down -v
+-docker-compose down -v
 
 ### Contributing
 We welcome contributions! Feel free to open issues for suggestions or to submit pull requests for bug fixes and enhancements.
