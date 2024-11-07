@@ -48,12 +48,12 @@ This project serves as the backend for the Garage Sale App, built using Spring B
 
 Create a `.env` file in the root directory to define the following environment variables:
 
-SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/gs_db
-SPRING_DATASOURCE_USERNAME=your_db_username
-SPRING_DATASOURCE_PASSWORD=your_db_password
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-JWT_SECRET=your_jwt_secret_key
+      SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/gs_db
+      SPRING_DATASOURCE_USERNAME=your_db_username
+      SPRING_DATASOURCE_PASSWORD=your_db_password
+      GOOGLE_CLIENT_ID=your_google_client_id
+      GOOGLE_CLIENT_SECRET=your_google_client_secret
+      JWT_SECRET=your_jwt_secret_key
 
 ### Running the Application
 Install Dependencies:
