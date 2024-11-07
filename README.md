@@ -1,3 +1,6 @@
+# About the App: 
+The Garage Sale App is a digital marketplace where users can buy and sell items within their local community. The platform features role-based access, allowing sellers to list items and buyers to browse and purchase. Additionally, the app offers appointment scheduling to facilitate meetups for item exchange. Using Google OAuth for secure login, the app emphasizes user-friendly interactions and aims to create a seamless, community-focused buying and selling experience.
+
 # Garage Sale App Backend
 
 This project serves as the backend for the Garage Sale App, built using Spring Boot. It provides APIs to manage user authentication, item listings, and appointment scheduling, with role-based access for sellers and buyers.
