@@ -88,41 +88,51 @@ Here’s an overview of the project structure:
 ### API Endpoints
 
 Authentication Endpoints
-POST /auth/login - Google login.
-GET /auth/logout - Logout user.
+
+            POST /auth/login - Google login.
+            GET /auth/logout - Logout user.
 
 Item Endpoints
-POST /items/create - Create a new item (for SELLER).
-GET /items/home/{homeId} - Retrieve items by home.
-PUT /items/{id} - Update item.
-DELETE /items/{id} - Delete item.
-GET /items/all - Get all items.
+
+            POST /items/create - Create a new item (for SELLER).
+            GET /items/home/{homeId} - Retrieve items by home.
+            PUT /items/{id} - Update item.
+            DELETE /items/{id} - Delete item.
+            GET /items/all - Get all items.
 
 Appointment Endpoints
-POST /appointments - Schedule a new appointment.
-PUT /appointments/{id}/status - Update appointment status.
+
+            POST /appointments - Schedule a new appointment.
+            PUT /appointments/{id}/status - Update appointment status.
 
 API Documentation
-Swagger documentation is available at:
-http://localhost:8080/swagger-ui/index.html
+
+            Swagger documentation is available at:
+            http://localhost:8080/swagger-ui/index.html
 
 Testing
+
 Unit Testing
-Unit tests validate service layer functionality, ensuring that business logic works as expected. Tests use mock objects for database interactions to prevent reliance on actual data.
+
+        Unit tests validate service layer functionality, ensuring that business logic works as expected. Tests use mock objects for database interactions to prevent reliance on actual data.
 
 Run all unit tests:
--mvn test
+
+        -mvn test
 
 Integration Testing
-Integration tests validate API endpoints and the overall flow, covering scenarios like item creation, appointment scheduling, and user authentication. Tests are located in src/test/java.
+        
+                Integration tests validate API endpoints and the overall flow, covering scenarios like item creation, appointment scheduling, and user authentication. Tests are located in src/test/java.
 
 Docker Support
 To run the backend with Docker, ensure Docker and Docker Compose are installed. The following commands are available:
 
 Start the containers
--docker-compose up -d
+
+      -docker-compose up -d
 Stop and remove containers and volumes
--docker-compose down -v
+
+      -docker-compose down -v
 
 ### Contributing
 We welcome contributions! Feel free to open issues for suggestions or to submit pull requests for bug fixes and enhancements.
